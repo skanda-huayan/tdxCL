@@ -2,6 +2,12 @@
 精簡版ChanlunX，筆、段、中樞。
 for：通達信和大智慧
 
+通達信版說明：
+https://www.55188.com/thread-9524243-1-1.html
+
+大智慧版說明：
+https://www.55188.com/thread-9555831-1-1.html
+
 #編譯#
 ```
 VC6.0即可。
