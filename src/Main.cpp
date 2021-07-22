@@ -4,7 +4,7 @@
 
 using namespace std;
 
-// ¶¨ÒåDLL³ÌĞòµÄÈë¿Úº¯Êı
+// å®šä¹‰DLLç¨‹åºçš„å…¥å£å‡½æ•°
 BOOL APIENTRY DllMain( HANDLE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
 {
     switch (ul_reason_for_call)
@@ -19,7 +19,7 @@ BOOL APIENTRY DllMain( HANDLE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
 }
 
 //=============================================================================
-// Êä³öº¯Êı1ºÅ£ºKÏß·½Ïò
+// è¾“å‡ºå‡½æ•°1å·ï¼šKçº¿æ–¹å‘
 //=============================================================================
 void Func1(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
 {
@@ -42,7 +42,7 @@ void Func1(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
 }
 
 //=============================================================================
-// Êä³öº¯Êı2ºÅ£ºÊÇ·ñÊÇÓĞ°üº¬¹ØÏµµÄKÏß
+// è¾“å‡ºå‡½æ•°2å·ï¼šæ˜¯å¦æ˜¯æœ‰åŒ…å«å…³ç³»çš„Kçº¿
 //=============================================================================
 void Func2(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
 {
@@ -65,7 +65,7 @@ void Func2(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
 }
 
 //=============================================================================
-// Êä³öº¯Êı3ºÅ£º°üº¬´¦ÀíºóµÄKÏß¸ß
+// è¾“å‡ºå‡½æ•°3å·ï¼šåŒ…å«å¤„ç†åçš„Kçº¿é«˜
 //=============================================================================
 void Func3(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
 {
@@ -88,7 +88,7 @@ void Func3(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
 }
 
 //=============================================================================
-// Êä³öº¯Êı4ºÅ£º°üº¬´¦ÀíºóµÄKÏßµÍ
+// è¾“å‡ºå‡½æ•°4å·ï¼šåŒ…å«å¤„ç†åçš„Kçº¿ä½
 //=============================================================================
 void Func4(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
 {
@@ -111,7 +111,7 @@ void Func4(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
 }
 
 //=============================================================================
-// Êä³öº¯Êı5ºÅ£º´¦ÀíÒ»ÏÂ°üº¬ĞÅºÅ£¬·½±ãÍ¨´ïĞÅ»­Ïß
+// è¾“å‡ºå‡½æ•°5å·ï¼šå¤„ç†ä¸€ä¸‹åŒ…å«ä¿¡å·ï¼Œæ–¹ä¾¿é€šè¾¾ä¿¡ç”»çº¿
 //=============================================================================
 void Func5(int nCount, float *pOut, float *pIn1, float *pIn2, float *pInclude)
 {
@@ -149,23 +149,23 @@ void Func5(int nCount, float *pOut, float *pIn1, float *pIn2, float *pInclude)
 }
 
 //=============================================================================
-// Êä³öº¯Êı6ºÅ£ºÊä³ö±Ê¶¥µ×¶Ëµã
+// è¾“å‡ºå‡½æ•°6å·ï¼šè¾“å‡ºç¬”é¡¶åº•ç«¯ç‚¹
 //=============================================================================
 void Func6(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
 {
-    Bi2(nCount, pOut, pIn, pHigh, pLow); // ÑÏ¸ñ±Ê
+    Bi2(nCount, pOut, pIn, pHigh, pLow); // ä¸¥æ ¼ç¬”
 }
  
 //=============================================================================
-// Êä³öº¯Êı7ºÅ£ºÏß¶Î¶¥µ×ĞÅºÅ
+// è¾“å‡ºå‡½æ•°7å·ï¼šçº¿æ®µé¡¶åº•ä¿¡å·
 //=============================================================================
 void Func7(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
 {
-    Duan0(nCount, pOut, pIn, pHigh, pLow);// ÌØÕ÷ĞòÁĞ·ÖĞÍ
+    Duan0(nCount, pOut, pIn, pHigh, pLow);// ç‰¹å¾åºåˆ—åˆ†å‹
 }
 
 //=============================================================================
-// Êä³öº¯Êı8ºÅ£ºÖĞÊà¸ßµãÊı¾İ
+// è¾“å‡ºå‡½æ•°8å·ï¼šä¸­æ¢é«˜ç‚¹æ•°æ®
 //=============================================================================
 void Func8(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
 {
@@ -175,7 +175,7 @@ void Func8(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
     {
         if (pIn[i] == 1)
         {
-            // Óöµ½Ïß¶Î¸ßµã£¬ÍÆÈëÖĞÊàËã·¨
+            // é‡åˆ°çº¿æ®µé«˜ç‚¹ï¼Œæ¨å…¥ä¸­æ¢ç®—æ³•
             if (ZhongShuOne.PushHigh(i, pHigh[i]))
             {
                 bool bValid = true;
@@ -184,7 +184,7 @@ void Func8(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                 int nLowIndex;
                 int nLowIndexTemp;
                 int nHighCount = 0;
-                if (ZhongShuOne.nDirection == 1 && ZhongShuOne.nTerminate == -1) // ÏòÉÏÖĞÊà±»ÏòÏÂÖÕ½á
+                if (ZhongShuOne.nDirection == 1 && ZhongShuOne.nTerminate == -1) // å‘ä¸Šä¸­æ¢è¢«å‘ä¸‹ç»ˆç»“
                 {
                     bValid = false;
                     for (int x = ZhongShuOne.nStart; x <= ZhongShuOne.nEnd; x++)
@@ -219,7 +219,7 @@ void Func8(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                     }
                     if (bValid)
                     {
-                        ZhongShuOne.nEnd = nLowIndex; // ÖĞÊà½áÊøµãÒÆµ½×î¸ßµãµÄÇ°Ò»¸öµÍµã¡£
+                        ZhongShuOne.nEnd = nLowIndex; // ä¸­æ¢ç»“æŸç‚¹ç§»åˆ°æœ€é«˜ç‚¹çš„å‰ä¸€ä¸ªä½ç‚¹ã€‚
                     }
                     i = nHignIndex - 1;
                 }
@@ -229,7 +229,7 @@ void Func8(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                 }
                 if (bValid)
                 {
-                    // Çø¶ÎÄÚ¸üĞÂËãµÃµÄÖĞÊà¸ßÊı¾İ
+                    // åŒºæ®µå†…æ›´æ–°ç®—å¾—çš„ä¸­æ¢é«˜æ•°æ®
                     for (int j = ZhongShuOne.nStart + 1; j <= ZhongShuOne.nEnd - 1; j++)
                     {
                         pOut[j] = ZhongShuOne.fHigh;
@@ -242,7 +242,7 @@ void Func8(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
         }
         else if (pIn[i] == -1)
         {
-            // Óöµ½Ïß¶ÎµÍµã£¬ÍÆÈëÖĞÊàËã·¨
+            // é‡åˆ°çº¿æ®µä½ç‚¹ï¼Œæ¨å…¥ä¸­æ¢ç®—æ³•
             if (ZhongShuOne.PushLow(i, pLow[i]))
             {
                 bool bValid = true;
@@ -251,7 +251,7 @@ void Func8(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                 int nHighIndex;
                 int nHighIndexTemp;
                 int nLowCount = 0;
-                if (ZhongShuOne.nDirection == -1 && ZhongShuOne.nTerminate == 1) // ÏòÏÂÖĞÊà±»ÏòÉÏÖÕ½á
+                if (ZhongShuOne.nDirection == -1 && ZhongShuOne.nTerminate == 1) // å‘ä¸‹ä¸­æ¢è¢«å‘ä¸Šç»ˆç»“
                 {
                     bValid = false;
                     for (int x = ZhongShuOne.nStart; x <= ZhongShuOne.nEnd; x++)
@@ -286,7 +286,7 @@ void Func8(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                     }
                     if (bValid)
                     {
-                        ZhongShuOne.nEnd = nHighIndex; // ÖĞÊà½áÊøµãÒÆµ½×î¸ßµãµÄÇ°Ò»¸öµÍµã¡£
+                        ZhongShuOne.nEnd = nHighIndex; // ä¸­æ¢ç»“æŸç‚¹ç§»åˆ°æœ€é«˜ç‚¹çš„å‰ä¸€ä¸ªä½ç‚¹ã€‚
                     }
                     i = nLowIndex - 1;
                 }
@@ -296,7 +296,7 @@ void Func8(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                 }
                 if (bValid)
                 {
-                    // Çø¶ÎÄÚ¸üĞÂËãµÃµÄÖĞÊà¸ßÊı¾İ
+                    // åŒºæ®µå†…æ›´æ–°ç®—å¾—çš„ä¸­æ¢é«˜æ•°æ®
                     for (int j = ZhongShuOne.nStart + 1; j <= ZhongShuOne.nEnd - 1; j++)
                     {
                         pOut[j] = ZhongShuOne.fHigh;
@@ -308,9 +308,9 @@ void Func8(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
             }
         }
     }
-    if (ZhongShuOne.bValid) // ×îºóÒ»¸ö»¹Ã»ÓĞ±»ÖÕ½áµÄÖĞÊà¡£
+    if (ZhongShuOne.bValid) // æœ€åä¸€ä¸ªè¿˜æ²¡æœ‰è¢«ç»ˆç»“çš„ä¸­æ¢ã€‚
     {
-        // Çø¶ÎÄÚ¸üĞÂËãµÃµÄÖĞÊà¸ßÊı¾İ
+        // åŒºæ®µå†…æ›´æ–°ç®—å¾—çš„ä¸­æ¢é«˜æ•°æ®
         for (int j = ZhongShuOne.nStart + 1; j <= ZhongShuOne.nEnd - 1; j++)
         {
             pOut[j] = ZhongShuOne.fHigh;
@@ -319,7 +319,7 @@ void Func8(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
 }
 
 //=============================================================================
-// Êä³öº¯Êı9ºÅ£ºÖĞÊàµÍµãÊı¾İ
+// è¾“å‡ºå‡½æ•°9å·ï¼šä¸­æ¢ä½ç‚¹æ•°æ®
 //=============================================================================
 void Func9(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
 {
@@ -330,7 +330,7 @@ void Func9(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
     {
         if (pIn[i] == 1)
         {
-            // Óöµ½Ïß¶Î¸ßµã£¬ÍÆÈëÖĞÊàËã·¨
+            // é‡åˆ°çº¿æ®µé«˜ç‚¹ï¼Œæ¨å…¥ä¸­æ¢ç®—æ³•
             if (ZhongShuOne.PushHigh(i, pHigh[i]))
             {
                 bool bValid = true;
@@ -339,7 +339,7 @@ void Func9(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                 int nLowIndex;
                 int nLowIndexTemp;
                 int nHighCount = 0;
-                if (ZhongShuOne.nDirection == 1 && ZhongShuOne.nTerminate == -1) // ÏòÉÏÖĞÊà±»ÏòÏÂÖÕ½á
+                if (ZhongShuOne.nDirection == 1 && ZhongShuOne.nTerminate == -1) // å‘ä¸Šä¸­æ¢è¢«å‘ä¸‹ç»ˆç»“
                 {
                     bValid = false;
                     for (int x = ZhongShuOne.nStart; x <= ZhongShuOne.nEnd; x++)
@@ -374,7 +374,7 @@ void Func9(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                     }
                     if (bValid)
                     {
-                        ZhongShuOne.nEnd = nLowIndex; // ÖĞÊà½áÊøµãÒÆµ½×î¸ßµãµÄÇ°Ò»¸öµÍµã¡£
+                        ZhongShuOne.nEnd = nLowIndex; // ä¸­æ¢ç»“æŸç‚¹ç§»åˆ°æœ€é«˜ç‚¹çš„å‰ä¸€ä¸ªä½ç‚¹ã€‚
                     }
                     i = nHignIndex - 1;
                 }
@@ -384,7 +384,7 @@ void Func9(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                 }
                 if (bValid)
                 {
-                    // Çø¶ÎÄÚ¸üĞÂËãµÃµÄÖĞÊàµÍÊı¾İ
+                    // åŒºæ®µå†…æ›´æ–°ç®—å¾—çš„ä¸­æ¢ä½æ•°æ®
                     for (int j = ZhongShuOne.nStart + 1; j <= ZhongShuOne.nEnd - 1; j++)
                     {
                         pOut[j] = ZhongShuOne.fLow;
@@ -397,7 +397,7 @@ void Func9(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
         }
         else if (pIn[i] == -1)
         {
-            // Óöµ½Ïß¶ÎµÍµã£¬ÍÆÈëÖĞÊàËã·¨
+            // é‡åˆ°çº¿æ®µä½ç‚¹ï¼Œæ¨å…¥ä¸­æ¢ç®—æ³•
             if (ZhongShuOne.PushLow(i, pLow[i]))
             {
                 bool bValid = true;
@@ -406,7 +406,7 @@ void Func9(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                 int nHighIndex;
                 int nHighIndexTemp;
                 int nLowCount = 0;
-                if (ZhongShuOne.nDirection == -1 && ZhongShuOne.nTerminate == 1) // ÏòÏÂÖĞÊà±»ÏòÉÏÖÕ½á
+                if (ZhongShuOne.nDirection == -1 && ZhongShuOne.nTerminate == 1) // å‘ä¸‹ä¸­æ¢è¢«å‘ä¸Šç»ˆç»“
                 {
                     bValid = false;
                     for (int x = ZhongShuOne.nStart; x <= ZhongShuOne.nEnd; x++)
@@ -441,7 +441,7 @@ void Func9(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                     }
                     if (bValid)
                     {
-                        ZhongShuOne.nEnd = nHighIndex; // ÖĞÊà½áÊøµãÒÆµ½×î¸ßµãµÄÇ°Ò»¸öµÍµã¡£
+                        ZhongShuOne.nEnd = nHighIndex; // ä¸­æ¢ç»“æŸç‚¹ç§»åˆ°æœ€é«˜ç‚¹çš„å‰ä¸€ä¸ªä½ç‚¹ã€‚
                     }
                     i = nLowIndex - 1;
                 }
@@ -451,7 +451,7 @@ void Func9(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                 }
                 if (bValid)
                 {
-                    // Çø¶ÎÄÚ¸üĞÂËãµÃµÄÖĞÊàµÍÊı¾İ
+                    // åŒºæ®µå†…æ›´æ–°ç®—å¾—çš„ä¸­æ¢ä½æ•°æ®
                     for (int j = ZhongShuOne.nStart + 1; j <= ZhongShuOne.nEnd - 1; j++)
                     {
                         pOut[j] = ZhongShuOne.fLow;
@@ -465,7 +465,7 @@ void Func9(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
     }
     if (ZhongShuOne.bValid)
     {
-        // Çø¶ÎÄÚ¸üĞÂËãµÃµÄÖĞÊàµÍÊı¾İ
+        // åŒºæ®µå†…æ›´æ–°ç®—å¾—çš„ä¸­æ¢ä½æ•°æ®
         for (int j = ZhongShuOne.nStart + 1; j <= ZhongShuOne.nEnd - 1; j++)
         {
             pOut[j] = ZhongShuOne.fLow;
@@ -474,7 +474,7 @@ void Func9(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
 }
 
 //=============================================================================
-// Êä³öº¯Êı10ºÅ£ºÖĞÊàÆğµã¡¢ÖÕµãĞÅºÅ
+// è¾“å‡ºå‡½æ•°10å·ï¼šä¸­æ¢èµ·ç‚¹ã€ç»ˆç‚¹ä¿¡å·
 //=============================================================================
 void Func10(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
 {
@@ -488,19 +488,19 @@ void Func10(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
     {
         if (pIn[i] == 1)
         {
-            // Óöµ½Ïß¶Î¸ßµã£¬ÍÆÈëÖĞÊàËã·¨
+            // é‡åˆ°çº¿æ®µé«˜ç‚¹ï¼Œæ¨å…¥ä¸­æ¢ç®—æ³•
             if (ZhongShuOne.PushHigh(i, pHigh[i]))
             {
-                //fout<<"ÖĞÊàÖÕ½á"<<pHigh[i]<<endl;
+                //fout<<"ä¸­æ¢ç»ˆç»“"<<pHigh[i]<<endl;
                 bool bValid = true;
                 float fHighValue;
                 int nHignIndex;
                 int nLowIndex;
                 int nLowIndexTemp;
                 int nHighCount = 0;
-                if (ZhongShuOne.nDirection == 1 && ZhongShuOne.nTerminate == -1) // ÏòÉÏÖĞÊà±»ÏòÏÂÖÕ½á
+                if (ZhongShuOne.nDirection == 1 && ZhongShuOne.nTerminate == -1) // å‘ä¸Šä¸­æ¢è¢«å‘ä¸‹ç»ˆç»“
                 {
-                    //fout<<"ÏòÉÏÖĞÊà±»ÏòÏÂÖÕ½á<<endl;
+                    //fout<<"å‘ä¸Šä¸­æ¢è¢«å‘ä¸‹ç»ˆç»“<<endl;
                     bValid = false;
                     for (int x = ZhongShuOne.nStart; x <= ZhongShuOne.nEnd; x++)
                     {
@@ -534,24 +534,24 @@ void Func10(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                     }
                     if (bValid)
                     {
-                        //fout<<"Í¬¼¶±ğ·Ö½â±£Áô×îºóÖĞÊà<<endl;
-                        //fout<<"ÖĞÊà½áÊøµãÒÆµ½<<pLow[nLowIndex]<<endl;
-                        ZhongShuOne.nEnd = nLowIndex; // ÖĞÊà½áÊøµãÒÆµ½×î¸ßµãµÄÇ°Ò»¸öµÍµã¡£
+                        //fout<<"åŒçº§åˆ«åˆ†è§£ä¿ç•™æœ€åä¸­æ¢<<endl;
+                        //fout<<"ä¸­æ¢ç»“æŸç‚¹ç§»åˆ°<<pLow[nLowIndex]<<endl;
+                        ZhongShuOne.nEnd = nLowIndex; // ä¸­æ¢ç»“æŸç‚¹ç§»åˆ°æœ€é«˜ç‚¹çš„å‰ä¸€ä¸ªä½ç‚¹ã€‚
                     }
                     else
                     {
-                        //fout<<"Í¬¼¶±ğ·Ö½â×îºóÖĞÊàÎŞĞ§<<endl;
+                        //fout<<"åŒçº§åˆ«åˆ†è§£æœ€åä¸­æ¢æ— æ•ˆ<<endl;
                     }
                     i = nHignIndex - 1;
                 }
                 else
                 {
-                    //fout<<"ÏòÏÂÖĞÊà±»ÏòÏÂÖÕ½á<<endl;
+                    //fout<<"å‘ä¸‹ä¸­æ¢è¢«å‘ä¸‹ç»ˆç»“<<endl;
                     i = ZhongShuOne.nEnd - 1;
                 }
                 if (bValid)
                 {
-                    // ½øĞĞ±ê¼Ç
+                    // è¿›è¡Œæ ‡è®°
                     pOut[ZhongShuOne.nStart + 1] = 1;
                     pOut[ZhongShuOne.nEnd - 1]   = 2;
                 }
@@ -560,19 +560,19 @@ void Func10(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
         }
         else if (pIn[i] == -1)
         {
-            // Óöµ½Ïß¶ÎµÍµã£¬ÍÆÈëÖĞÊàËã·¨
+            // é‡åˆ°çº¿æ®µä½ç‚¹ï¼Œæ¨å…¥ä¸­æ¢ç®—æ³•
             if (ZhongShuOne.PushLow(i, pLow[i]))
             {
-                //fout<<"ÖĞÊàÖÕ½á"<<pHigh[i]<<endl;
+                //fout<<"ä¸­æ¢ç»ˆç»“"<<pHigh[i]<<endl;
                 bool bValid = true;
                 float fLowValue;
                 int nLowIndex;
                 int nHighIndex;
                 int nHighIndexTemp;
                 int nLowCount = 0;
-                if (ZhongShuOne.nDirection == -1 && ZhongShuOne.nTerminate == 1) // ÏòÏÂÖĞÊà±»ÏòÉÏÖÕ½á
+                if (ZhongShuOne.nDirection == -1 && ZhongShuOne.nTerminate == 1) // å‘ä¸‹ä¸­æ¢è¢«å‘ä¸Šç»ˆç»“
                 {
-                    //fout<<"ÏòÏÂÖĞÊà±»ÏòÉÏÖÕ½á<<endl;
+                    //fout<<"å‘ä¸‹ä¸­æ¢è¢«å‘ä¸Šç»ˆç»“<<endl;
                     bValid = false;
                     for (int x = ZhongShuOne.nStart; x <= ZhongShuOne.nEnd; x++)
                     {
@@ -598,7 +598,7 @@ void Func10(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                                     nHighIndex = nHighIndexTemp;
                                 }
                             }
-                            //fout<<"µÍµãÊıÁ¿"<<nLowCount<<endl;
+                            //fout<<"ä½ç‚¹æ•°é‡"<<nLowCount<<endl;
                         }
                         else if (pIn[x] == 1)
                         {
@@ -607,24 +607,24 @@ void Func10(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                     }
                     if (bValid)
                     {
-                        //fout<<"Í¬¼¶±ğ·Ö½â±£Áô×îºóÖĞÊà<<endl;
-                        //fout<<"ÖĞÊà½áÊøµãÒÆµ½<<pHigh[nHighIndex]<<endl;
-                        ZhongShuOne.nEnd = nHighIndex; // ÖĞÊà½áÊøµãÒÆµ½×î¸ßµãµÄÇ°Ò»¸öµÍµã¡£
+                        //fout<<"åŒçº§åˆ«åˆ†è§£ä¿ç•™æœ€åä¸­æ¢<<endl;
+                        //fout<<"ä¸­æ¢ç»“æŸç‚¹ç§»åˆ°<<pHigh[nHighIndex]<<endl;
+                        ZhongShuOne.nEnd = nHighIndex; // ä¸­æ¢ç»“æŸç‚¹ç§»åˆ°æœ€é«˜ç‚¹çš„å‰ä¸€ä¸ªä½ç‚¹ã€‚
                     }
                     else
                     {
-                        //fout<<"Í¬¼¶±ğ·Ö½â×îºóÖĞÊàÎŞĞ§<<endl;
+                        //fout<<"åŒçº§åˆ«åˆ†è§£æœ€åä¸­æ¢æ— æ•ˆ<<endl;
                     }
                     i = nLowIndex - 1;
                 }
                 else
                 {
-                    //fout<<"ÏòÉÏÖĞÊà±»ÏòÉÏÖÕ½á<<endl;
+                    //fout<<"å‘ä¸Šä¸­æ¢è¢«å‘ä¸Šç»ˆç»“<<endl;
                     i = ZhongShuOne.nEnd - 1;
                 }
                 if (bValid)
                 {
-                    // ½øĞĞ±ê¼Ç
+                    // è¿›è¡Œæ ‡è®°
                     pOut[ZhongShuOne.nStart + 1] = 1;
                     pOut[ZhongShuOne.nEnd - 1]   = 2;
 
@@ -635,7 +635,7 @@ void Func10(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
     }
     if (ZhongShuOne.bValid)
     {
-        // ½øĞĞ±ê¼Ç
+        // è¿›è¡Œæ ‡è®°
         pOut[ZhongShuOne.nStart + 1] = 1;
         pOut[ZhongShuOne.nEnd - 1]   = 2;
     }
@@ -643,7 +643,7 @@ void Func10(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
 }
 
 //=============================================================================
-// Êä³öº¯Êı11ºÅ£ºÖĞÊà·½ÏòÊı¾İ
+// è¾“å‡ºå‡½æ•°11å·ï¼šä¸­æ¢æ–¹å‘æ•°æ®
 //=============================================================================
 void Func11(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
 {
@@ -654,7 +654,7 @@ void Func11(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
     {
         if (pIn[i] == 1)
         {
-            // Óöµ½Ïß¶Î¸ßµã£¬ÍÆÈëÖĞÊàËã·¨
+            // é‡åˆ°çº¿æ®µé«˜ç‚¹ï¼Œæ¨å…¥ä¸­æ¢ç®—æ³•
             if (ZhongShuOne.PushHigh(i, pHigh[i]))
             {
                 bool bValid = true;
@@ -663,7 +663,7 @@ void Func11(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                 int nLowIndex;
                 int nLowIndexTemp;
                 int nHighCount = 0;
-                if (ZhongShuOne.nDirection == 1 && ZhongShuOne.nTerminate == -1) // ÏòÉÏÖĞÊà±»ÏòÏÂÖÕ½á
+                if (ZhongShuOne.nDirection == 1 && ZhongShuOne.nTerminate == -1) // å‘ä¸Šä¸­æ¢è¢«å‘ä¸‹ç»ˆç»“
                 {
                     bValid = false;
                     for (int x = ZhongShuOne.nStart; x <= ZhongShuOne.nEnd; x++)
@@ -698,7 +698,7 @@ void Func11(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                     }
                     if (bValid)
                     {
-                        ZhongShuOne.nEnd = nLowIndex; // ÖĞÊà½áÊøµãÒÆµ½×î¸ßµãµÄÇ°Ò»¸öµÍµã¡£
+                        ZhongShuOne.nEnd = nLowIndex; // ä¸­æ¢ç»“æŸç‚¹ç§»åˆ°æœ€é«˜ç‚¹çš„å‰ä¸€ä¸ªä½ç‚¹ã€‚
                     }
                     i = nHignIndex - 1;
                 }
@@ -708,7 +708,7 @@ void Func11(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                 }
                 if (bValid)
                 {
-                    // Çø¶ÎÄÚ¸üĞÂËãµÃµÄÖĞÊà·½ÏòÊı¾İ
+                    // åŒºæ®µå†…æ›´æ–°ç®—å¾—çš„ä¸­æ¢æ–¹å‘æ•°æ®
                     for (int j = ZhongShuOne.nStart + 1; j <= ZhongShuOne.nEnd - 1; j++)
                     {
                         pOut[j] = (float) ZhongShuOne.nDirection;
@@ -721,7 +721,7 @@ void Func11(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
         }
         else if (pIn[i] == -1)
         {
-            // Óöµ½Ïß¶ÎµÍµã£¬ÍÆÈëÖĞÊàËã·¨
+            // é‡åˆ°çº¿æ®µä½ç‚¹ï¼Œæ¨å…¥ä¸­æ¢ç®—æ³•
             if (ZhongShuOne.PushLow(i, pLow[i]))
             {
                 bool bValid = true;
@@ -730,7 +730,7 @@ void Func11(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                 int nHighIndex;
                 int nHighIndexTemp;
                 int nLowCount = 0;
-                if (ZhongShuOne.nDirection == -1 && ZhongShuOne.nTerminate == 1) // ÏòÏÂÖĞÊà±»ÏòÉÏÖÕ½á
+                if (ZhongShuOne.nDirection == -1 && ZhongShuOne.nTerminate == 1) // å‘ä¸‹ä¸­æ¢è¢«å‘ä¸Šç»ˆç»“
                 {
                     bValid = false;
                     for (int x = ZhongShuOne.nStart; x <= ZhongShuOne.nEnd; x++)
@@ -765,7 +765,7 @@ void Func11(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                     }
                     if (bValid)
                     {
-                        ZhongShuOne.nEnd = nHighIndex; // ÖĞÊà½áÊøµãÒÆµ½×î¸ßµãµÄÇ°Ò»¸öµÍµã¡£
+                        ZhongShuOne.nEnd = nHighIndex; // ä¸­æ¢ç»“æŸç‚¹ç§»åˆ°æœ€é«˜ç‚¹çš„å‰ä¸€ä¸ªä½ç‚¹ã€‚
                     }
                     i = nLowIndex - 1;
                 }
@@ -775,7 +775,7 @@ void Func11(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                 }
                 if (bValid)
                 {
-                    // Çø¶ÎÄÚ¸üĞÂËãµÃµÄÖĞÊà·½ÏòÊı¾İ
+                    // åŒºæ®µå†…æ›´æ–°ç®—å¾—çš„ä¸­æ¢æ–¹å‘æ•°æ®
                     for (int j = ZhongShuOne.nStart + 1; j <= ZhongShuOne.nEnd - 1; j++)
                     {
                         pOut[j] = (float) ZhongShuOne.nDirection;
@@ -789,7 +789,7 @@ void Func11(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
     }
     if (ZhongShuOne.bValid)
     {
-        // Çø¶ÎÄÚ¸üĞÂËãµÃµÄÖĞÊà·½ÏòÊı¾İ
+        // åŒºæ®µå†…æ›´æ–°ç®—å¾—çš„ä¸­æ¢æ–¹å‘æ•°æ®
         for (int j = ZhongShuOne.nStart + 1; j <= ZhongShuOne.nEnd - 1; j++)
         {
             pOut[j] = (float) ZhongShuOne.nDirection;
@@ -824,4 +824,228 @@ BOOL RegisterTdxFunc(PluginTCalcFuncInfo **pInfo)
 
     return FALSE;
 }
+
+/********************************************************************/
+//************************äº¤æ˜“å¸ˆ å¤§æ™ºæ…§******************************//
+/********************************************************************/
+// --- ChanlunX å¤§æ™ºæ…§è¾“å‡ºå‡½æ•° --- //
+__declspec(dllexport) int WINAPI RUNMODE()
+{
+    return 0;
+}
+
+// --- 1 Kçº¿æ–¹å‘
+__declspec(dllexport) int WINAPI KXFX(CALCINFO* pData)
+{
+    int nDataLen = pData->m_nNumData;
+    float *pHigh = new float[nDataLen];
+    float *pLow = new float[nDataLen];
+
+    for (int i = 0; i < nDataLen; i++)
+    {
+        pHigh[i] = pData->m_pData[i].m_fHigh;
+        pLow[i] = pData->m_pData[i].m_fLow;
+    }
+    Func1(nDataLen, pData->m_pResultBuf, NULL, pHigh, pLow);
+    delete []pHigh;
+    delete []pLow;
+    return 0;
+}
+
+// --- 2 Kçº¿åŒ…å«
+__declspec(dllexport) int WINAPI KXBH(CALCINFO* pData)
+{
+    int nDataLen = pData->m_nNumData;
+    float *pHigh = new float[nDataLen];
+    float *pLow = new float[nDataLen];
+
+    for (int i = 0; i < nDataLen; i++)
+    {
+        pHigh[i] = pData->m_pData[i].m_fHigh;
+        pLow[i] = pData->m_pData[i].m_fLow;
+    }
+    Func2(nDataLen, pData->m_pResultBuf, NULL, pHigh, pLow);
+    delete []pHigh;
+    delete []pLow;
+    return 0;
+}
+
+// --- 3 Kçº¿åŒ…å«å¤„ç†
+__declspec(dllexport) int WINAPI KXBH2VAR(CALCINFO* pData)
+{
+    int nDataLen = pData->m_nNumData;
+    float *pIn = new float[nDataLen];
+    for (int i = 0; i < nDataLen; i++)
+    {
+        pIn[i] = pData->m_pfParam1[i];
+    }
+    Func5(nDataLen, pData->m_pResultBuf, NULL, NULL, pIn);
+    delete []pIn;
+    return 0;
+}
+
+// --- 4 Kçº¿åŒ…å«å¤„ç†åçš„é«˜ç‚¹
+__declspec(dllexport) int WINAPI KXBHG(CALCINFO* pData)
+{
+    int nDataLen = pData->m_nNumData;
+    float *pHigh = new float[nDataLen];
+    float *pLow = new float[nDataLen];
+
+    for (int i = 0; i < nDataLen; i++)
+    {
+        pHigh[i] = pData->m_pData[i].m_fHigh;
+        pLow[i] = pData->m_pData[i].m_fLow;
+    }
+    Func3(nDataLen, pData->m_pResultBuf, NULL, pHigh, pLow);
+    delete []pHigh;
+    delete []pLow;
+    return 0;
+}
+
+// --- 5 Kçº¿åŒ…å«å¤„ç†åçš„ä½ç‚¹
+__declspec(dllexport) int WINAPI KXBHD(CALCINFO* pData)
+{
+    int nDataLen = pData->m_nNumData;
+    float *pHigh = new float[nDataLen];
+    float *pLow = new float[nDataLen];
+
+    for (int i = 0; i < nDataLen; i++)
+    {
+        pHigh[i] = pData->m_pData[i].m_fHigh;
+        pLow[i] = pData->m_pData[i].m_fLow;
+    }
+    Func4(nDataLen, pData->m_pResultBuf, NULL, pHigh, pLow);
+    delete []pHigh;
+    delete []pLow;
+    return 0;
+}
+
+// --- 6 ç¬”ç«¯ç‚¹
+__declspec(dllexport) int WINAPI BI(CALCINFO* pData)
+{
+    int nDataLen = pData->m_nNumData;
+    float *pHigh = new float[nDataLen];
+    float *pLow = new float[nDataLen];
+
+    for (int i = 0; i < nDataLen; i++)
+    {
+        pHigh[i] = pData->m_pData[i].m_fHigh;
+        pLow[i] = pData->m_pData[i].m_fLow;
+    }
+    Func6(nDataLen, pData->m_pResultBuf, NULL, pHigh, pLow);
+    delete []pHigh;
+    delete []pLow;
+    return 0;
+}
+
+// --- 7 æ®µç«¯ç‚¹
+__declspec(dllexport) int WINAPI DUANVAR(CALCINFO* pData)
+{
+    if(pData->m_pfParam1 && pData->m_nParam1Start >= 0)
+    {
+        int nDataLen = pData->m_nNumData;
+        float *pHigh = new float[nDataLen];
+        float *pLow = new float[nDataLen];
+        float *pIn = new float[nDataLen];
+
+        for (int i = 0; i < nDataLen; i++)
+        {
+            pHigh[i] = pData->m_pData[i].m_fHigh;
+            pLow[i] = pData->m_pData[i].m_fLow;
+            pIn[i] = pData->m_pfParam1[i];
+        }
+
+        Func7(nDataLen, pData->m_pResultBuf, pIn, pHigh, pLow);
+        delete []pHigh;
+        delete []pLow;
+        delete []pIn;
+        return 0;
+    }
+    return -1;
+}
+
+// --- 8 ä¸­æ¢é«˜ç‚¹
+__declspec(dllexport) int WINAPI ZSZGVAR(CALCINFO* pData)
+{
+    int nDataLen = pData->m_nNumData;
+    float *pHigh = new float[nDataLen];
+    float *pLow = new float[nDataLen];
+    float *pIn = new float[nDataLen];
+
+    for (int i = 0; i < nDataLen; i++)
+    {
+        pHigh[i] = pData->m_pData[i].m_fHigh;
+        pLow[i] = pData->m_pData[i].m_fLow;
+        pIn[i] = pData->m_pfParam1[i];
+    }
+    Func8(nDataLen, pData->m_pResultBuf, pIn, pHigh, pLow);
+    delete []pHigh;
+    delete []pLow;
+    delete []pIn;
+    return 0;
+}
+
+// --- 9 ä¸­æ¢ä½ç‚¹
+__declspec(dllexport) int WINAPI ZSZDVAR(CALCINFO* pData)
+{
+    int nDataLen = pData->m_nNumData;
+    float *pHigh = new float[nDataLen];
+    float *pLow = new float[nDataLen];
+    float *pIn = new float[nDataLen];
+
+    for (int i = 0; i < nDataLen; i++)
+    {
+        pHigh[i] = pData->m_pData[i].m_fHigh;
+        pLow[i] = pData->m_pData[i].m_fLow;
+        pIn[i] = pData->m_pfParam1[i];
+    }
+    Func9(nDataLen, pData->m_pResultBuf, pIn, pHigh, pLow);
+    delete []pHigh;
+    delete []pLow;
+    delete []pIn;
+    return 0;
+}
+
+// --- 10 ä¸­æ¢å¼€å§‹ç»“æŸ
+__declspec(dllexport) int WINAPI ZSSEVAR(CALCINFO* pData)
+{
+    int nDataLen = pData->m_nNumData;
+    float *pHigh = new float[nDataLen];
+    float *pLow = new float[nDataLen];
+    float *pIn = new float[nDataLen];
+
+    for (int i = 0; i < nDataLen; i++)
+    {
+        pHigh[i] = pData->m_pData[i].m_fHigh;
+        pLow[i] = pData->m_pData[i].m_fLow;
+        pIn[i] = pData->m_pfParam1[i];
+    }
+    Func10(nDataLen, pData->m_pResultBuf, pIn, pHigh, pLow);
+    delete []pHigh;
+    delete []pLow;
+    delete []pIn;
+    return 0;
+}
+
+// --- 11 ä¸­æ¢æ–¹å‘
+__declspec(dllexport) int WINAPI ZSFXVAR(CALCINFO* pData)
+{
+    int nDataLen = pData->m_nNumData;
+    float *pHigh = new float[nDataLen];
+    float *pLow = new float[nDataLen];
+    float *pIn = new float[nDataLen];
+
+    for (int i = 0; i < nDataLen; i++)
+    {
+        pHigh[i] = pData->m_pData[i].m_fHigh;
+        pLow[i] = pData->m_pData[i].m_fLow;
+        pIn[i] = pData->m_pfParam1[i];
+    }
+    Func11(nDataLen, pData->m_pResultBuf, pIn, pHigh, pLow);
+    delete []pHigh;
+    delete []pLow;
+    delete []pIn;
+    return 0;
+}
+// --- ChanlunX å¤§æ™ºæ…§è¾“å‡ºå‡½æ•° --- //
 
