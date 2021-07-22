@@ -61,3 +61,36 @@ IF(DUANZG,DUANZG,DRAWNULL),COLORFF8000;{画段中枢高点}
 IF(DUANZD,DUANZD,DRAWNULL),COLORFF8000;{画段中枢低点}
 STICKLINE(DUANSE,DUANZD,DUANZG,0,0),COLORFF8000;{画笔段中枢开始结束}
 ```
+#大智慧公式#
+```
+bi:="suCLX@BI";
+duan:="suCLX@DUANVAR"(bi);
+
+drawline(bi=1,h,bi=-1,l,0),dotline,coloryellow,linethick1;
+drawline(bi=-1,l,bi=1,h,0),dotline,coloryellow,linethick1;
+drawline(duan=1,h,duan=-1,l,0),colorblue,linethick1;
+drawline(duan=-1,l,duan=1,h,0),colorblue,linethick1;
+{段高低点}
+DRAWTEXT(duan=1, h,''+h), colorred, align1, valign2;
+DRAWTEXT(duan=-1, l,''+l), colorgreen, align1;
+
+zszg:="suCLX@ZSZGVAR"(bi);
+zszd:="suCLX@ZSZDVAR"(bi);
+zsse:="suCLX@ZSSEVAR"(bi);
+zszz:=(zszg+zszd)/2;
+
+dzszg:="suCLX@ZSZGVAR"(duan);
+dzszd:="suCLX@ZSZDVAR"(duan);
+dzsse:="suCLX@ZSSEVAR"(duan);
+
+DRAWLINE(zsse=1, zszg, zsse=2, zszg, 0), colorred, linethick1;
+DRAWLINE(zsse=1, zszd, zsse=2, zszd, 0), colorred, linethick1;
+STICKLINE(zsse=1, zszg, zszd, 1, 0), colorred, linethick1;
+STICKLINE(zsse=2, zszg, zszd, 1, 0), colorred, linethick1;
+DRAWLINE(zsse=1, zszz, zsse=2, zszz, 0), coloryellow;
+
+DRAWLINE(dzsse=1, dzszg, dzsse=2, dzszg, 0), colorblue, linethick1;
+DRAWLINE(dzsse=1, dzszd, dzsse=2, dzszd, 0), colorblue, linethick1;
+STICKLINE(dzsse=1, dzszg, dzszd, 1, -501), colorblue, linethick1;
+STICKLINE(dzsse=2, dzszg, dzszd, 1, 501), colorblue, linethick1;
+```
